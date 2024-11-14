@@ -126,7 +126,7 @@ def main() -> None:
         if not all(check_singular_cotent_id_no_start(x) for x in content_ids):
             raise ValueError(f'Inconsient contend ids in {content_ids_path}, fix up yo data')
     
-        start_id_input = input('Please enter the start of an example dlc id (eg UP9000-CUSA00473_00-LBPDLC2KADCO0004 or UP9000-CUSA00473_00): ')
+        start_id_input = input('Please enter the start of an example dlc id (eg UP9000-CUSA00473_00-LBPDLC2KADCO0004 or UP9000-CUSA00473_00): ').strip()
         start_id = check_content_id_starter_id(start_id_input)
         if not start_id:
             raise ValueError(f'Invalid start of dlc id {start_id_input}')
